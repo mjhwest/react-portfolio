@@ -7,16 +7,7 @@ import TParticles from "react-tsparticles";
 function App() {
   return (
     <>
-  <TParticles
-  params={{
-    number: {
-      value:30,
-      density: {
-        enable: true, 
-        value_area: 900
-      }
-    }
-  }} />
+  <TParticles />
    <Navbar /> 
     <Header />
 </>
