@@ -112,3 +112,11 @@ nav ul li {
     color: var(--primary-white);
     transition: .2s ease-in-out;
 }
+
+
+/*********************PARTICLES JS *************************/
+
+#tsparticles {
+    position: absolute;
+    height: 100vh;
+}
