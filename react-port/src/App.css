@@ -61,8 +61,8 @@ nav ul li {
 
 .header-wrapper {
     position: relative;
-    background: url(coffee.jpg) no-repeat;
-    filter: brightness(50%);
+    background: url(./assets/coffee3.jpg) no-repeat;
+    /* filter: brightness(50%); */
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -80,11 +80,13 @@ nav ul li {
     align-items: center;
     text-align: center;
     font-family: "Roboto Condesed", sans-serif;
+    filter: brightness(100%);
 }
 
 .main-info h1 {
     color: var(--primary-orange);
     text-transform: uppercase;
+    filter: brightness(100%) !important;
 }
 
 
