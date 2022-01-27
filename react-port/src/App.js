@@ -2,6 +2,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import AboutMe from "./components/AboutMe";
 
 // not working
 // import Particles from "react-tsparticles";
@@ -11,6 +12,7 @@ function App() {
     <>
    <Navbar /> 
     <Header />
+    <AboutMe />
 </>
   );
 }
