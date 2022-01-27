@@ -75,7 +75,7 @@ const Header = () => {
             enable: true,
             outMode: "bounce",
             random: false,
-            speed: 6,
+            speed: 3,
             straight: false,
           },
           number: {
