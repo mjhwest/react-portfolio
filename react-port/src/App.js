@@ -4,9 +4,8 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Experience from './components/Experience';
+import Portfolio from './components/Portfolio';
 
-// not working
-// import Particles from "react-tsparticles";
 
 function App() {
   return (
@@ -15,51 +14,10 @@ function App() {
     <Header />
     <AboutMe />
     <Experience/> 
+    <Portfolio /> 
 </>
   );
 }
 
 export default App;
-
-
-
-/* <Particles 
-
-options = {{
-  particles: {
-    number: {
-      value:30, 
-      density: {
-        enable: true,
-        value_area:900
-      }
-    }
-  }
-}} */
-
-// options={{
-//   particles: {
-//     color: {
-//       value: "#ffffff",
-//     },
-//   },
-//   links: {
-//     color: "#ffffff",
-//           distance: 150,
-//           enable: true,
-//           opacity: 0.5,
-//           width: 1,
-//   },
-//   number: {
-//     density: {
-//       enable: true,
-//       area: 800,
-//     },
-//     value: 40, 
-//   }
-
-// }}
-
-//neeed to close this off here 
-
 
