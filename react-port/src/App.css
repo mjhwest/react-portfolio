@@ -13,6 +13,7 @@
     --primary-grey: #ccd1d9;
     --primary-dark-grey: #666666;
     --primary-antiquewhite: #faebd7;
+    --primary-black: #000000;
 }
 
 
@@ -281,20 +282,45 @@ nav ul li {
 .portfolio-image {
     width: 15rem;
     border: 1px solid var(--primary-orange);
-    /* padding: 0 0.5rem; */
+    padding: 0 0.5rem;
 }
 
 
-/* .row>* {
+/* 
+.row>* {
     flex-shrink: 0;
-    width: 20%;
-    max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
+    /* width: 100%; */
+
+
+/* max-width: 100%; */
+
+
+/* padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y)
-} */
+    margin-top: var(--bs-gutter-y) */
+
+
+/* } */
 
 .portfolio-image-box {
     position: relative;
     margin: 1rem;
+    flex-shrink: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y)
+}
+
+
+/*********************OVERFLOW BOX*************************/
+
+.overflow {
+    position: absolute;
+    opacity: 0;
+    background: var(--primary-black);
+    width: 15rem;
+    height: 8rem;
+    top: 0;
+    border: 1px solid var(--primary-red);
+    cursor: pointer;
 }

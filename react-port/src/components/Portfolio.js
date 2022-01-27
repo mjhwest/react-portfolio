@@ -17,23 +17,27 @@ function Portfolio() {
             <div className="image-box-wrapper row justify-content-center"> 
             <div className="portfolio-image-box">
             <img className="portfolio-image" src={career} alt="career-headstart cover.." />
+            <div className="overflow"> </div>
             </div>
             {/*----*/}
 
             <div className="portfolio-image-box">
             <img className="portfolio-image" src={ecommerce} alt="ecommerce store cover.." />
+            <div className="overflow"> </div>
             
             </div>
             {/*----*/}
        
             <div className="portfolio-image-box">
             <img className="portfolio-image" src={instant} alt="instant cover.." />
+            <div className="overflow"> </div>
             
             </div>
             {/*----*/}
     
             <div className="portfolio-image-box">
             <img className="portfolio-image" src={employee} alt="employee db cover.." />
+            <div className="overflow"> </div>
             </div>
             </div>
             {/*----*/}
