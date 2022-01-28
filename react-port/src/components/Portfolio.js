@@ -33,6 +33,7 @@ function Portfolio() {
   }
 
   const popupboxConfigCareer = {
+    content, 
     titleBar: {
       enable: true,
       text: "Career Headstart Project"
