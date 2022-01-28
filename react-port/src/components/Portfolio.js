@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 // import images from 4 repos i have created//
 import career from "../assets/career.png";
 import ecommerce from "../assets/ecommerce.png";
@@ -16,6 +16,11 @@ import "react-popupbox/dist/react-popupbox.css";
 
 function Portfolio() {
 
+  const [careerOpen, setCareerOpen] = useState(false);
+  const [ecommerceOpen, setEcommerceOpen] = useState(false);
+  const [cryptoOpen, setCryptoOpen] = useState(false);
+  const [employeeOpen, setEmployeeOpen] = useState(false);
+
   //career
   const openPopupboxCareer = () => {
     const content =(
@@ -30,11 +35,12 @@ function Portfolio() {
     </> 
     )
     PopupboxManager.open({content})
+    setCareerOpen(true); 
   }
 
   const popupboxConfigCareer = {
-    content, 
     titleBar: {
+      className:"", 
       enable: true,
       text: "Career Headstart Project"
     },
@@ -56,6 +62,7 @@ function Portfolio() {
       </> 
       )
       PopupboxManager.open({content})
+      setEcommerceOpen(true); 
     }
   
     const popupboxConfigEcommerce = {
@@ -82,6 +89,7 @@ function Portfolio() {
         </> 
         )
         PopupboxManager.open({content})
+        setCryptoOpen(true);
       }
     
       const popupboxConfigInstantc = {
@@ -107,6 +115,7 @@ function Portfolio() {
         </> 
         )
         PopupboxManager.open({content})
+        setEmployeeOpen(true); 
       }
     
       const popupboxConfigEmployee = {
@@ -165,12 +174,37 @@ function Portfolio() {
         
         {/*----*/}
       </div>
-      <PopupboxContainer {...popupboxConfigCareer} /> 
-      <PopupboxContainer {...popupboxConfigEcommerce} /> 
-    <PopupboxContainer {...popupboxConfigInstantc} />
 
-    
-    <PopupboxContainer {...popupboxConfigEmployee} /> 
+
+      <div style ={{display: careerOpen ? "block" : "none"}}>
+        <PopupboxContainer onClosed={() => {
+          console.log("closed career");
+          setCareerOpen(false);
+        }} {...popupboxConfigCareer} /> 
+      </div>
+
+      <div style ={{display: ecommerceOpen ? "block" : "none"}}>
+        <PopupboxContainer onClosed={() => {
+          console.log("closed ecommerce");
+          setEcommerceOpen(false);
+        }} {...popupboxConfigEcommerce} /> 
+      </div>
+
+      <div style ={{display: cryptoOpen ? "block" : "none"}}>
+        <PopupboxContainer onClosed={() => {
+          console.log("closed crypto");
+          setCryptoOpen(false);
+        }} {...popupboxConfigInstantc} /> 
+      </div>
+
+      <div style ={{display: employeeOpen ? "block" : "none"}}>
+        <PopupboxContainer onClosed={() => {
+          console.log("closed employee");
+          setEmployeeOpen(false);
+        }} {...popupboxConfigEmployee} /> 
+      </div>
+
+
 
     </div>
   );
