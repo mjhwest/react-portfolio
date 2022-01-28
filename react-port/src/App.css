@@ -14,6 +14,7 @@
     --primary-dark-grey: #666666;
     --primary-antiquewhite: #faebd7;
     --primary-black: #000000;
+    --primary-blue: #336dfe;
 }
 
 
@@ -285,22 +286,10 @@ nav ul li {
     padding: 0 0.5rem;
 }
 
-
-/* 
-.row>* {
-    flex-shrink: 0;
-    /* width: 100%; */
-
-
-/* max-width: 100%; */
-
-
-/* padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y) */
-
-
-/* } */
+.image-box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .portfolio-image-box {
     position: relative;
@@ -308,7 +297,7 @@ nav ul li {
     flex-shrink: 0;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y)
+    margin-top: var(--bs-gutter-y);
 }
 
 
@@ -316,8 +305,8 @@ nav ul li {
 
 .overflow {
     position: absolute;
-    /* opacity: 0; */
-    background: var(--primary-black);
+    opacity: 0;
+    /* background: var(--primary-black); */
     width: 15rem;
     height: 8rem;
     top: 0;
@@ -344,3 +333,31 @@ nav ul li {
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
+
+
+/*********************OVERFLOW BOX*************************/
+
+.portfolio-image-popupbox {
+    width: 45rem;
+    padding: 0 0.5rem;
+}
+
+.popupbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+}
+
+
+/* .hyper-link {
+    cursor: pointer;
+    color: var(--primary-blue)
+}
+
+.hyper-link:hover {
+    cursor: pointer;
+    color: var()
+} */
