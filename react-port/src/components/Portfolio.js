@@ -40,7 +40,6 @@ function Portfolio() {
 
   const popupboxConfigCareer = {
     titleBar: {
-      className:"", 
       enable: true,
       text: "Career Headstart Project"
     },
@@ -68,7 +67,7 @@ function Portfolio() {
     const popupboxConfigEcommerce = {
       titleBar: {
         enable: true,
-        text: "E-Commerce Back End StoreProject"
+        text: "E-Commerce Store - Back End "
       },
       fadeIn: true,
       fadeInSpeed: 500
@@ -95,7 +94,7 @@ function Portfolio() {
       const popupboxConfigInstantc = {
         titleBar: {
           enable: true,
-          text: "Creating our own web application using 2 different server-side API's "
+          text: "Web application using 2 different server-side API's "
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -121,7 +120,7 @@ function Portfolio() {
       const popupboxConfigEmployee = {
         titleBar: {
           enable: true,
-          text: "The back-end for a company to manage employee. "
+          text: "Employee Tracker Database For Managment "
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -133,6 +132,7 @@ function Portfolio() {
     <div className="portfolio-wrapper">
       <div className="container">
         <h1 className="text-uppercase text-center py-5"> Portfolio </h1>
+        <h3 className="text-uppercase text-center py-1"> Take at a look at my work </h3>
         <div className="image-box-wrapper justify-content-center">
           <div className="portfolio-image-box" onClick={openPopupboxCareer}>
             <img
