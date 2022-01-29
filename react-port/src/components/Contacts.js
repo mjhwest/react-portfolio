@@ -1,6 +1,38 @@
 import React from "react";
+import emailjs from '@emailjs/browser';
+import {useForm} from "react-hook-form";
 
 function Contact() {
+
+   const { register, handleSubmit, errors } = useForm();
+
+   const serviceID = "service_ID"; 
+   const templateID = "template_ID"
+   const userID = "user_OpUxDY7fJBHxo03iPkcKc"
+
+   const onSubmit = (data, r) => {
+      sendEmail(serviceID, templateID,
+         {
+            name: data.name,
+            phone: data.phone, 
+            email: data.email,
+            subject: data.subject,
+            description: data.description
+         })
+   } 
+
+
+   const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm(serviceID, templateID, e.target , userID)
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+
   return (
       
       <div className="contacts">
@@ -10,6 +42,7 @@ function Contact() {
      </div>
 
    <div className="container">
+      <form onSubmit={sendEmail} >
       <div className="row">
       <div className="col-md-6 col-xs-12">
                {/*NAME INPUT FIELD*/}
@@ -71,6 +104,7 @@ function Contact() {
                <button className="btn-main-offer contact-btn" type="submit"> contact me </button>
             </div>
          </div>
+         </form>
       </div>
   </div>
 
