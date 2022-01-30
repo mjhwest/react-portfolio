@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import $ from "jquery";
 // import { useForm } from "react-hook-form";
@@ -9,43 +10,31 @@ function Contact() {
   const templateID = "template_ID";
   const userID = "user_OpUxDY7fJBHxo03iPkcKc";
 
-  var createModal = function () {
-    $("#success-modal").show();
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(form)
+    emailjs.sendForm(serviceID, templateID, form.current, userID)
+      .then((result) => {
+          console.log(result.text);
+          // createModal();
+          $("#success-modal").show();
+          $("#close-modal").on("click", function () {
+            $("#name").val("");
+            $("#phone").val("");
+            $("#email").val("");
+            $("#description").val("");
+            $("#subject").val("");
+            $("#success-modal").hide();
+          });
+      }, (error) => {
+          console.log(error.text);
+      });
   };
 
-  $("#send-email").on("click", function (e) {
-    e.preventDefault();
-    console.log("Hello");
-    var emailObject = {
-      name: $("#name").val(),
-      phone: $("#phone").val(),
-      email: $("#email").val(),
-      description: $("#description").val(),
-      subject: $("#subject").val(),
-    };
-
-    emailjs.send(serviceID, templateID, emailObject, userID).then(
-      (result) => {
-        console.log(result.text);
-
-        createModal();
-        $("#close-modal").on("click", function () {
-          $("#name").val("");
-          $("#phone").val("");
-          $("#email").val("");
-          $("#description").val("");
-          $("#subject").val("");
-          $("#success-modal").hide();
-        });
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
-  });
-
   return (
-    <div className="contacts">
+    <div id="contact" className="contacts">
       <div className="text-center">
         <h1> contact me </h1>
         <p>
@@ -56,71 +45,66 @@ function Contact() {
       </div>
 
       <div className="container">
-        <div className="row">
-          <div className="col-md-6 col-xs-12">
-            <div className="text-center">
-              {/* <label for="name">Name</label> */}
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                placeholder="name"
-              />
-              <div className="line"> </div>
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="row">
+            <div className="col-md-6 col-xs-12">
+              <div className="text-center">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="name"
+                  name="name"
+                />
+                <div className="line"> </div>
+              </div>
+              <div className="text-center">
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="email"
+                  name="email"
+                />
+                <div className="line"> </div>
+              </div>
+              <div className="text-center">
+                <input
+                  type="phone"
+                  className="form-control"
+                  id="phone"
+                  placeholder="Contact Number"
+                  name="phone"
+                />
+                <div className="line"> </div>
+              </div>
+              <div className="text-center">
+                <input
+                  type="subject"
+                  className="form-control"
+                  id="subject"
+                  placeholder="subject"
+                  name="subject"
+                />
+                <div className="line"> </div>
+              </div>
             </div>
-            <div className="text-center">
-              {/* <label for="email">Email</label> */}
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="email"
-              />
-              <div className="line"> </div>
-            </div>
-            <div className="text-center">
-              {/* <label for="email">Phone</label> */}
-              <input
-                type="phone"
-                className="form-control"
-                id="phone"
-                placeholder="Contact Number"
-              />
-              <div className="line"> </div>
-            </div>
-            <div className="text-center">
-              {/* <label for="email">Subject</label> */}
-              <input
-                type="subject"
-                className="form-control"
-                id="subject"
-                placeholder="subject"
-              />
-              <div className="line"> </div>
+            {/* main description */}
+            <div className="col-md-6 col-xs-12">
+              <div className="text-center">
+                <textarea
+                  className="form-control"
+                  id="description"
+                  rows="4"
+                  placeholder="What do you wanan talk about?"
+                  name="description"
+                ></textarea>
+                <div className="line"> </div>
+              </div>
+              <input type="submit" className="btn-main-offer contact-btn" value="Send" />
             </div>
           </div>
-          {/* main description */}
-          <div className="col-md-6 col-xs-12">
-            <div className="text-center">
-              {/* <label for="description">Description</label> */}
-              <textarea
-                className="form-control"
-                id="description"
-                rows="4"
-                placeholder="What do you wanan talk about?"
-              ></textarea>
-              <div className="line"> </div>
-            </div>
-            <button
-              className="btn-main-offer contact-btn"
-              id="send-email"
-              // type="submit"
-
-            >
-              Submit
-            </button>
-          </div>
-        </div>
+        </form>
       </div>
       <div id="success-modal" className="custom-modal">
         <h1 className="success-heading pb-3">Thanks for your message!</h1>
