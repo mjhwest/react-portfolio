@@ -2,6 +2,7 @@ import React from "react";
 import Typed from "react-typed"
 //undo to here
 import Particles from "react-tsparticles";
+import {Link} from "react-scroll"
 
 const Header = () => {
 
@@ -109,7 +110,7 @@ const Header = () => {
             loop
             />
 
-            <a href="#" className="btn-main-offer"> CONTACT ME  </a>
+            <Link smooth={true} to="contact" href="#" className="btn-main-offer"> CONTACT ME  </Link>
 
         </div>
          </div>
