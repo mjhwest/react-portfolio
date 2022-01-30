@@ -1,31 +1,30 @@
 import React from "react";
 import emailjs from '@emailjs/browser';
-import {useForm} from "react-hook-form";
+// import {useForm} from "react-hook-form";
 
 function Contact() {
 
-   const { register, handleSubmit, errors } = useForm();
+   // const { register, handleSubmit, errors } = useForm();
 
    const serviceID = "service_ID"; 
    const templateID = "template_ID"
    const userID = "user_OpUxDY7fJBHxo03iPkcKc"
 
-   const onSubmit = (data, r) => {
-      sendEmail(serviceID, templateID,
-         {
-            name: data.name,
-            phone: data.phone, 
-            email: data.email,
-            subject: data.subject,
-            description: data.description
-         })
-   } 
-
+   // const onSubmit = (data, r) => {
+   //    sendEmail(serviceID, templateID,
+   //       {
+   //          name: data.name,
+   //          phone: data.phone, 
+   //          email: data.email,
+   //          subject: data.subject,
+   //          description: data.description
+   //       })
+   // } 
 
    const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm(serviceID, templateID, e.target , userID)
+      emailjs.sendForm(serviceID, templateID, e.target, userID)
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -48,7 +47,6 @@ function Contact() {
                {/*NAME INPUT FIELD*/}
                <div className="text-center">
                <input 
-      
                type="text"
                className="form-control"
                placeholder="Name"
@@ -56,21 +54,21 @@ function Contact() {
                />
                <div className="line"> </div>
                </div>
+
                {/*PHONE NUMBER INPUT FIELD*/}
                <div className="text-center">
                <input 
-            
                text="text"
                className="form-control"
                placeholder="Phone Number"
                name="phone"
                />
-                      <div className="line"> </div>
-                      </div>
+               <div className="line"> </div>
+               </div>
+               
                {/*EMAIL INPUT FIELD*/}
                <div className="text-center">
                <input 
-             
                type="email"
                className="form-control"
                placeholder="Email"
@@ -81,7 +79,6 @@ function Contact() {
                {/*SUBJECT INPUT FIELD*/}
                <div className="text-center">
                <input 
-
                type="text"
                className="form-control"
                placeholder="Subject"
@@ -91,7 +88,8 @@ function Contact() {
             </div> 
             </div>
             <div className="col-md-6 col-xs-12">
-            {/*DESCRIPTION*/}
+
+            {/*EMAIL DESCRIPTION*/}
             <div className="text-center">
             <textarea 
             type="text"
