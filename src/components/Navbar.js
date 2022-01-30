@@ -63,15 +63,16 @@ const Navbar = () => {
         <Link smooth={true} to="portfolio" offset={-100} className="nav-link" href="#">portfolio</Link>
       </li>
       <li className="nav-item">
-        <Link smooth={true} className="nav-link" href="#">github</Link>
+        <a href="https://github.com/mjhwest" target="_blank" rel="noopener noreferrer" className="nav-link"  >github</a>
       </li>
       <li className="nav-item">
-        <Link smooth={true} className="nav-link" href="#">resume</Link>
+        <a href="https://drive.google.com/file/d/1LyfOoN5r5EcFuZFziYDx9VpOkqhl3tnB/view" target="_blank" rel="noopener noreferrer" className="nav-link" >resume</a>
       </li>
       <li className="nav-item">
         <Link smooth={true} to="contact" offset={-100} className="nav-link" href="#">contact me</Link>
       </li>
       </ul>
+      {/* <a href="https://drive.google.com/file/d/1LyfOoN5r5EcFuZFziYDx9VpOkqhl3tnB/view" className="footer-nav" target="_blank" rel="noopener noreferrer" class="menu-item"> Resume </a> */}
  </div>
  </div>
 </nav>
