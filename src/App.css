@@ -24,6 +24,11 @@ it is being imported into the index index.html in public folder, and i have the 
     
     nav {
         z-index: 2;
+        position: fixed !important;
+        width: 100%;
+        /* opacity: 1; */
+        transition: background-color 0.3s ease-in-out;
+        background-color: rgb(33, 37, 41);
     }
     /* .navbar-brand {
     max-width: 17.25rem;
@@ -31,15 +36,16 @@ it is being imported into the index index.html in public folder, and i have the 
     height: 6rem !important;
 } */
     
+    .navbar-brand img {
+        height: 10.9375rem;
+        padding-left: 1.5625rem;
+        transition: height 0.4s ease-in-out;
+    }
+    
     @media(max-width: 768px) {
         .navbar-brand {
             width: 7rem;
         }
-    }
-    
-    .navbar-brand img {
-        height: 10.9375rem;
-        padding-left: 1.5625rem;
     }
     /*********************MENU LINKS*************************/
     
@@ -54,14 +60,14 @@ it is being imported into the index index.html in public folder, and i have the 
     }
     
     .navbar-nav>li>a {
-        margin-right: .75rem;
-        margin-left: .75rem;
+        /* margin-right: .75rem; */
+        /* margin-left: .75rem; */
         color: var(--primary-white) !important;
         border: 0.1875rem solid var(--primary-dark);
     }
     
     .navbar-nav>li>a.active,
-    .navbar-nav>li>a.active:focus {
+    .navbar-nav>li>a:focus {
         border-top: 0.1875rem solid var(--primary-orange);
     }
     
@@ -76,7 +82,7 @@ it is being imported into the index index.html in public folder, and i have the 
         /* filter: brightness(50%); */
         background-size: cover;
         background-position: center;
-        height: 90vh;
+        height: 100vh;
     }
     
     .main-info {
@@ -444,9 +450,20 @@ it is being imported into the index index.html in public folder, and i have the 
     }
     
     .contact-btn {
-        margin: 1rem 0 0 0;
         width: 100%;
-        background: none;
+        margin: 1rem 0 0 0;
+        border: 1px solid var(--primary-red) !important;
+        text-transform: uppercase;
+        border-radius: 0;
+        padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+        color: var(--primary-white);
+    }
+    
+    .contact-btn:hover {
+        text-decoration: none;
+        background-color: var(--primary-hover-red);
+        color: var(--primary-white);
+        transition: .2s ease-in-out;
     }
     
     .line {
@@ -494,10 +511,33 @@ it is being imported into the index index.html in public folder, and i have the 
         background: #353535;
         text-align: center;
         /* / Change the width of the modal (may need to be larger on smaller screens - ie. 80% or larger for screens less than 768px) / width: 60%;
-        / Height will fit whatever content you want to put in there / height: fit-content; */
+        / Height will fit whatever content you want to put in there / */
+        height: fit-content;
         padding: 3rem;
         border-radius: 6px;
         -webkit-box-shadow: 0px 0px 33px 8px rgba(0, 0, 0, 0.65);
         box-shadow: 0px 0px 33px 8px rgba(0, 0, 0, 0.65);
         display: none;
+    }
+    /*********************FOOTER *************************/
+    
+    .footer {
+        background-color: var(--primary-black);
+        color: var(--primary-dark-grey);
+        padding: 3rem;
+    }
+    
+    .footer a {
+        text-decoration: none;
+        color: var(--primary-dark-grey);
+    }
+    
+    .footer a:hover {
+        text-decoration: none;
+        color: var(--primary-orange);
+        cursor: pointer;
+    }
+    
+    .footer p {
+        margin-bottom: 0;
     }
