@@ -161,6 +161,14 @@ it is being imported into the index index.html in public folder, and i have the 
     }
     /*********************Experience*************************/
     
+    .text-muted {
+        font-size: 1.1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        opacity: .7;
+        color: #000 !important;
+        font-weight: 200;
+    }
+    
     .experience {
         padding: 0.7rem;
         background-color: var(--primary-antiquewhite)

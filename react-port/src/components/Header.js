@@ -83,7 +83,7 @@ const Header = () => {
               enable: true,
               area: 800,
             },
-            value: 20,
+            value: 25,
           },
           opacity: {
             value: 0.5,
