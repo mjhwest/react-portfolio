@@ -137,7 +137,7 @@ function Portfolio() {
       // setImage();
 
   return (
-    <div className="portfolio-wrapper">
+    <div id="portfolio" className="portfolio-wrapper">
       <div className="container">
         <h1 className="text-uppercase text-center py-5"> Portfolio </h1>
         <h3 className="text-uppercase text-center py-1"> Take at a look at my work </h3>
