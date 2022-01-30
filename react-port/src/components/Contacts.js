@@ -49,9 +49,9 @@ function Contact() {
       <div className="text-center">
         <h1> contact me </h1>
         <p>
-          {" "}
+          
           Feel like getting in contact with me? Complete the form and ill be in
-          touch!{" "}
+          touch!
         </p>
       </div>
 
@@ -115,6 +115,7 @@ function Contact() {
               className="btn-main-offer contact-btn"
               id="send-email"
               // type="submit"
+
             >
               Submit
             </button>
