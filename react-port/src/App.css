@@ -395,6 +395,7 @@ it is being imported into the index index.html in public folder, and i have the 
     
     .contacts {
         padding: 3rem 0;
+        position: relative;
         background-color: #343435;
     }
     
@@ -482,4 +483,21 @@ it is being imported into the index index.html in public folder, and i have the 
         .contacts p {
             padding: 0 1rem;
         }
+    }
+    /*********************MODAL *************************/
+    
+    .custom-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #353535;
+        text-align: center;
+        /* / Change the width of the modal (may need to be larger on smaller screens - ie. 80% or larger for screens less than 768px) / width: 60%;
+        / Height will fit whatever content you want to put in there / height: fit-content; */
+        padding: 3rem;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 0px 33px 8px rgba(0, 0, 0, 0.65);
+        box-shadow: 0px 0px 33px 8px rgba(0, 0, 0, 0.65);
+        display: none;
     }
