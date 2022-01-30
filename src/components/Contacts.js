@@ -51,7 +51,7 @@ function Contact() {
         <p>
           
           Feel like getting in contact with me? Complete the form and ill be in
-          touch!
+          touch. 
         </p>
       </div>
 
