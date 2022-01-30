@@ -4,6 +4,7 @@ import career from "../assets/career.png";
 import ecommerce from "../assets/ecommerce.png";
 import instantc from "../assets/instantc.png";
 import employee from "../assets/employee.png";
+import $ from 'jquery';
 
 //font awesome import//
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -126,7 +127,14 @@ function Portfolio() {
         fadeInSpeed: 500
       }
 
+      // UPDATE PORTFOLIO IMAGE BOXES 
+      // function setImage () { 
+      //     $(".portfolio-image-box").css({
+      //       "background": `url(${career} center center/cover no-repeat)` 
+      //     })
+      // }
 
+      // setImage();
 
   return (
     <div className="portfolio-wrapper">
