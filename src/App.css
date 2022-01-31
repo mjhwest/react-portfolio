@@ -320,11 +320,10 @@ it is being imported into the index index.html in public folder, and i have the 
         border: 1px solid var(--primary-red);
         cursor: pointer;
     }
-    
-    .portfolio-image-box:hover .overflow {
+    /* .portfolio-image-box:hover .overflow {
         opacity: 60%;
         transition: 0.s ease-in-out;
-    }
+    } */
     
     .portfolio-icon {
         position: absolute;
@@ -403,6 +402,9 @@ it is being imported into the index index.html in public folder, and i have the 
         padding: 3rem 0;
         position: relative;
         background-color: #343435;
+        /* background: url(./assets/scrab.jpg) no-repeat;
+        background-size: cover;
+        background-position: center; */
     }
     
     .contacts h1 {
