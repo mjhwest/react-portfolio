@@ -10,7 +10,13 @@ import Footer from "./components/Footer"
 
 
 
+
+
+
 function App() {
+ 
+  
+
   return (
     <>
    <Navbar /> 
@@ -20,8 +26,6 @@ function App() {
     <Portfolio /> 
     <Contacts/>
     <Footer /> 
-
-
 </>
   );
 }
