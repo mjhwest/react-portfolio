@@ -49,6 +49,8 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
+
+            
             <div className="col-lg-5 col-md-5 col-sm-6 align-items-center">
                 <div className="d-flex justify-content-center"> 
                 <FacebookShareButton
