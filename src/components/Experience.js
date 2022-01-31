@@ -24,7 +24,7 @@ function Experience() {
           <div className="timeline-block timeline-block-left">
           <div className="marker"> </div>
               <div className="timeline-content">
-                  <h3> 2005-Current </h3>
+                  <h3> 2005</h3>
                   <p> &#9749; Had my first ever coffee and never turned back &#9749;  </p>
               </div>
           </div>
