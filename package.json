@@ -2,7 +2,7 @@
     "name": "react-port",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://mjhwest.github.io/{react-portfolio}",
+    "homepage": "https://mjhwest.github.io/react-portfolio",
     "dependencies": {
         "@emailjs/browser": "^3.4.0",
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
