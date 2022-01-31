@@ -43,7 +43,7 @@ export const Footer = () => {
                             <br/>
                             <a className="footer-nav"> Contact Me </a>
                             <br/>
-                            <a href="https://github.com/mjhwest" className="footer-nav" target="_blank" rel="noopener noreferrer" class="menu-item"> GitHub </a>
+                            <a href="https://github.com/mjhwest" className="footer-nav" target="_blank" rel="noopener noreferrer" className="menu-item"> GitHub </a>
                             <br/>
                             <a href="https://drive.google.com/file/d/1LyfOoN5r5EcFuZFziYDx9VpOkqhl3tnB/view" className="footer-nav" target="_blank" rel="noopener noreferrer" class="menu-item"> Resume </a>
                     </div>

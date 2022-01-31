@@ -31,7 +31,7 @@ function Portfolio() {
     A full-stack web application for users that are seeking work or users who are posting job in hope to gain employees.   </p>
     GitHub: <a className="hyper-link" href="https://github.com/mjhwest/career-headstart"  target="_blank" rel="noopener noreferrer" className="menu-item"> https://github.com/mjhwest/career-headstart </a><br>
     </br>
-    Deployed Application: <a href="https://career-head-start.herokuapp.com/"  target="_blank" rel="noopener noreferrer" class="menu-item"> https://career-head-start.herokuapp.com/ </a>
+    Deployed Application: <a href="https://career-head-start.herokuapp.com/"  target="_blank" rel="noopener noreferrer" className="menu-item"> https://career-head-start.herokuapp.com/ </a>
   
     </> 
     )
