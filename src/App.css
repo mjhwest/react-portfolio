@@ -23,7 +23,7 @@ it is being imported into the index index.html in public folder, and i have the 
     /*********************NAVBAR*************************/
     
     nav {
-        z-index: 2;
+        z-index: 15;
         position: fixed !important;
         width: 100%;
         /* opacity: 1; */
@@ -37,14 +37,21 @@ it is being imported into the index index.html in public folder, and i have the 
 } */
     
     .navbar-brand img {
-        height: 10.9375rem;
+        height: 9rem !important;
         padding-left: 1.5625rem;
         transition: height 0.4s ease-in-out;
     }
     
+    .navbar-brand-logo {}
+    
     @media(max-width: 768px) {
         .navbar-brand {
             width: 7rem;
+        }
+        .navbar-brand img {
+            height: 6.5rem !important;
+            padding-left: 1.5625rem;
+            transition: height 0.4s ease-in-out;
         }
     }
     /*********************MENU LINKS*************************/
