@@ -38,5 +38,5 @@ There are not any installation requirements for this application. Simply click o
 If you would like to contribute to this project or any future projects please contact me via email at michaelwest.webdev@gmail.com
 
 ## License
-This project is released under the [MIT LICENSE](ADD LINK HERE)
+This project is released under the [MIT LICENSE](https://github.com/mjhwest/react-portfolio/blob/main/LICENSE)
 
