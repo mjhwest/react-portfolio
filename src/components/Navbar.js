@@ -66,7 +66,7 @@ const Navbar = () => {
         <a href="https://github.com/mjhwest" target="_blank" rel="noopener noreferrer" className="nav-link"  >github</a>
       </li>
       <li className="nav-item">
-        <a href="https://drive.google.com/file/d/1LyfOoN5r5EcFuZFziYDx9VpOkqhl3tnB/view" target="_blank" rel="noopener noreferrer" className="nav-link" >resume</a>
+        <a href="https://drive.google.com/file/d/14IdEPOxim6tqld-ikTonpBDMTKvPI1cf/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="nav-link" >resume</a>
       </li>
       <li className="nav-item">
         <Link smooth={true} to="contact" offset={-100} className="nav-link" href="#">contact me</Link>
