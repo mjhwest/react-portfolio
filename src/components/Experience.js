@@ -12,6 +12,7 @@ function Experience() {
                   <h3> 1989 </h3>
                   <p>Born  </p>
               </div> */}
+              
           </div>
       <div className="timeline-block timeline-block-right">
           <div className="marker"> </div>
